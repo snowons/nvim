@@ -1,0 +1,64 @@
+
+首先安装环境需要的软件
+
+```
+# mac
+brew install node python3 yarn ranger neovim 
+
+
+# ubuntu
+sudo apt install node python3 yarn ranger neovim 
+
+```
+
+然后安装neovim需要软件包
+
+```
+python -m pip install pynvim
+
+pip3 install --user --upgrade neovim
+
+pip3 install ranger-fm
+```
+
+
+## COC插件
+
+打开nvim执行以下命令安装coc扩展
+
+```
+CocInstall coc-css coc-explorer coc-html coc-snippets coc-ember coc-json coc-emmet coc-phpls coc-tsserver coc-eslint coc-highlight 
+
+CocInstall coc-prettier coc-vetur coc-git coc-svg coc-phpls coc-eslint coc-tailwindcss coc-fzf-preview coc-tabnine coc-fzf-preview
+```
+
+
+
+## 按键定义
+
+Leader 键定义为了空格，下面是自定义的按键说明
+
+### 移动定位
+
+| 热键    | 说明             | 模式 |
+| ------- | ---------------- | ---- |
+| mm      | 添加注释         |      |
+| shift+k | 上移5 行         |      |
+| shift+j | 下移5行          |      |
+| gd      | 转到类、函数定义 |      |
+| gf      | 跳转到文件       |      |
+| ctrl+j  | 行首             | 编辑 |
+| ctrl_k  | 行尾             | 编辑 |
+
+### 文件操作
+
+| 热键     | 说明                 |
+| -------- | -------------------- |
+| rc       | 打开当前目录         |
+| rp       | 打开项目目录         |
+| leader+f | fzf项目文件模糊搜索  |
+| leader+b | fzf  Buffer 文件搜索 |
+| fp       | 项目文件检测         |
+| fb       | 显示Buffers文件      |
+| fg       | 显示文件GIT状态      |
+
