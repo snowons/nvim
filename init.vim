@@ -190,8 +190,10 @@ map = :vertical :res+5<CR>
 map tn :tabe<CR>
 "创建标签
 map tc :tabclose<CR>
+"关闭其他标签
+map to :tabonly<CR>
 "向后跳标签
-map tk :tabnext<CR>
+map tj :tabnext<CR>
 "资源管理器
 nmap ge :CocCommand explorer <CR>
 
@@ -308,8 +310,20 @@ Plug 'yuezk/vim-js'
 
 " Syntax: scss
 Plug 'cakebaker/scss-syntax.vim'
-
+"缩进显示"
+Plug 'nathanaelkane/vim-indent-guides' 
+"操作多个文件"
+Plug 'fholgado/minibufexpl.vim' 
+"缩进指示线"
+Plug 'Yggdroot/indentLine' 
 call plug#end()
+"indentLine缩进插件配置
+
+let g:indentLine_char = "┆"
+
+let g:indentLine_enabled = 1
+let g:autopep8_disable_show_diff=1
+
 
 let g:bracey_server_allow_remote_connections=1
 let g:bracey_server_port=8080
