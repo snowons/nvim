@@ -32,11 +32,19 @@ CocInstall coc-css coc-explorer coc-html coc-snippets coc-ember coc-json coc-emm
 CocInstall coc-prettier coc-vetur coc-git coc-svg coc-phpls coc-eslint coc-tailwindcss coc-fzf-preview coc-tabnine coc-fzf-preview
 ```
 
-
-
 ## 按键定义
 
 Leader 键定义为了空格，下面是自定义的按键说明
+
+### Flutter 
+
+| 热键    | 说明             | 模式 |
+| ------- | ---------------- | ---- |
+| leader+fn| Run        |      |
+| leader+fr| HotRestart |      |
+| leader+fh | HotReload          |      |
+| leader+fq| Quit|      |
+| leader+fd| Debug|      |
 
 ### 移动定位
 

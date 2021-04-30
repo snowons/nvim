@@ -37,6 +37,14 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
 
+
+"Flutter shortcuts
+nnoremap <leader>fn :FlutterRun<cr>
+nnoremap <leader>fq :FlutterQuit<cr>
+nnoremap <leader>fh :FlutterHotReload<cr>
+nnoremap <leader>fr :FlutterHotRestart<cr>
+nnoremap <leader>fd :FlutterVisualDebug<cr>
+
 let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
 
 "共享剪贴板
@@ -321,6 +329,14 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'fholgado/minibufexpl.vim' 
 "缩进指示线"
 Plug 'Yggdroot/indentLine' 
+
+"Dart and flutter
+Plug 'natebosch/vim-lsc'
+Plug 'thosakwe/vim-flutter'
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'natebosch/vim-lsc-dart'
+
+
 call plug#end()
 "indentLine缩进插件配置
 
@@ -363,6 +379,11 @@ let g:NERDToggleCheckAllLines = 1
 
 " 切换注释
 " map <c-m> <leader>ci
+
+"Server dart 
+let dart_html_in_string=v:true
+let g:dart_style_guide = 2
+let g:dart_format_on_save = 1
 
 "============================COC 配置==========================
 " TextEdit might fail if hidden is not set.
