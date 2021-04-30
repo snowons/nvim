@@ -340,6 +340,10 @@ Plug 'natebosch/vim-lsc-dart'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 
+
+" 多点编辑
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+
 call plug#end()
 "indentLine缩进插件配置
 
