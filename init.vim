@@ -340,6 +340,8 @@ Plug 'natebosch/vim-lsc-dart'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 
+" 切换输入
+Plug 'lyokha/vim-xkbswitch'
 
 " 多点编辑
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
@@ -384,6 +386,8 @@ let g:NERDTrimTrailingWhitespace = 1
 " Enable NERDCommenterToggle to check all selected lines is commented or not
 let g:NERDToggleCheckAllLines = 1
 
+" 输入法切换
+let g:XkbSwitchEnabled = 1
 
 " 状态栏
  "----------------------------------------------------------------------
