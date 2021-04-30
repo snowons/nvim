@@ -231,7 +231,7 @@ let g:Lf_WindowPosition = 'popup'
 
 "============vim-airline============
 "显示tab和buffer
-"let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 "airline风格主题
 let g:airline_theme='molokai'
 
@@ -326,7 +326,7 @@ Plug 'cakebaker/scss-syntax.vim'
 "缩进显示"
 Plug 'nathanaelkane/vim-indent-guides' 
 "操作多个文件"
-Plug 'fholgado/minibufexpl.vim' 
+" Plug 'fholgado/minibufexpl.vim'
 "缩进指示线"
 Plug 'Yggdroot/indentLine' 
 
@@ -336,6 +336,9 @@ Plug 'thosakwe/vim-flutter'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'natebosch/vim-lsc-dart'
 
+" 状态栏美化
+Plug 'itchyny/lightline.vim'
+Plug 'mengelbrecht/lightline-bufferline'
 
 call plug#end()
 "indentLine缩进插件配置
@@ -376,6 +379,70 @@ let g:NERDTrimTrailingWhitespace = 1
 
 " Enable NERDCommenterToggle to check all selected lines is commented or not
 let g:NERDToggleCheckAllLines = 1
+
+
+" 状态栏
+ "----------------------------------------------------------------------
+" 插件 --- lightline 
+"----------------------------------------------------------------------
+let g:lightline#bufferline#show_number       = 2
+let g:lightline#bufferline#number_map        = { 0: ' ', 1: '⓵ ', 2: '⓶ ', 3: '⓷ ', 4: '⓸ ', 5: '⓹ ', 6: '⓺ ', 7: '⓻ ', 8: '⓼ ', 9: '⓽ ' }
+let g:lightline#bufferline#shorten_path      = 0
+let g:lightline#bufferline#unnamed           = '[No Name]'
+let g:lightline#bufferline#filename_modifier = ':t'
+let g:lightline#bufferline#enable_devicons   = 1
+let g:lightline#bufferline#unicode_symbols   = 1
+let g:lightline                              = {
+    \ 'colorscheme':'onedark',
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'gutter' ], [ 'cocstatus' ] ],
+    \   'right': [ [ 'tabs' ], [ 'syntastic', 'lineinfo' ], [ 'percent' ], [ 'filetype', 'fileformat', 'fileencoding' ] ]
+    \ },
+    \ 'tabline': { 'left': [ [ 'buffers' ] ], 'right': [ [ 'close' ] ] },
+    \ 'tab': {
+    \   'active': [ 'tabnum' ],
+    \   'inactive': [ 'tabnum' ]
+    \ },
+    \ 'component': { 'lineinfo': ' %3l:%-2v' },
+    \ 'component_expand': { 'buffers': 'lightline#bufferline#buffers' },
+    \ 'component_type': { 'buffers': 'tabsel' },
+    \ 'component_function': {
+    \   'readonly': 'LightlineReadonly',
+    \   'fugitive': 'LightlineFugitive',
+    \   'gutter': 'LightlineGutter',
+    \   'cocstatus': 'coc#status'
+    \ },
+    \ 'separator': { 'left': '', 'right': '' },
+    \ 'subseparator': { 'left': '', 'right': '' }
+    \ }
+" 只读文件显示
+function! LightlineReadonly()
+    return &readonly ? '' : ''
+endfunction
+" Fugitvie
+function! LightlineFugitive()
+    if exists('*FugitiveHead')
+        let branch = FugitiveHead()
+        return branch !=# '' ? ''.branch : ''
+    endif
+    return ''
+endfunction
+" Gutter
+function! LightlineGutter()
+  let [a,m,r] = GitGutterGetHunkSummary()
+  return printf(' %d  %d  %d', a, m, r)
+endfunction
+
+nmap <leader>1 <plug>lightline#bufferline#go(1)
+nmap <leader>2 <plug>lightline#bufferline#go(2)
+nmap <leader>3 <plug>lightline#bufferline#go(3)
+nmap <leader>4 <plug>lightline#bufferline#go(4)
+nmap <leader>5 <plug>lightline#bufferline#go(5)
+nmap <leader>6 <plug>lightline#bufferline#go(6)
+nmap <leader>7 <plug>lightline#bufferline#go(7)
+nmap <leader>8 <plug>lightline#bufferline#go(8)
+nmap <leader>9 <plug>lightline#bufferline#go(9)
+nmap <leader>0 <plug>lightline#bufferline#go(10) 
 
 " 切换注释
 " map <c-m> <leader>ci
