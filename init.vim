@@ -213,6 +213,10 @@ map <silent>rc :RangerOpenCurrentDir<CR>
 map <silent>rp :RangerOpenProjectRootDir<CR>
 
 
+"下一个buffer
+map <silent>bn :bn<CR>
+"删除当前buffer
+map <silent>bd :bd<CR>
 "============Yggdroot/LeaderF============
 "弹窗显示结果
 let g:Lf_WindowPosition = 'popup'
@@ -276,6 +280,7 @@ Plug 'iberianpig/ranger-explorer.vim'
 
 "fzf-preview
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 Plug 'kevinhwang91/rnvimr'
