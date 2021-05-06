@@ -401,7 +401,7 @@ let g:lightline#bufferline#filename_modifier = ':t'
 let g:lightline#bufferline#enable_devicons   = 1
 let g:lightline#bufferline#unicode_symbols   = 1
 let g:lightline                              = {
-    \ 'colorscheme':'onedark',
+    \ 'colorscheme':'one',
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'gutter' ], [ 'cocstatus' ] ],
     \   'right': [ [ 'tabs' ], [ 'syntastic', 'lineinfo' ], [ 'percent' ], [ 'filetype', 'fileformat', 'fileencoding' ] ]
