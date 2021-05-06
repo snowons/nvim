@@ -346,6 +346,10 @@ Plug 'lyokha/vim-xkbswitch'
 " 多点编辑
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
+
+" git
+Plug 'kdheepak/lazygit.nvim'
+
 call plug#end()
 "indentLine缩进插件配置
 
@@ -353,6 +357,10 @@ let g:indentLine_char = "┆"
 
 let g:indentLine_enabled = 1
 let g:autopep8_disable_show_diff=1
+
+
+" setup mapping to call :LazyGit
+nnoremap <silent> <leader>lg :LazyGit<CR>
 
 
 let g:bracey_server_allow_remote_connections=1
