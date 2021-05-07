@@ -1,10 +1,15 @@
 
 首先安装环境需要的软件
 
+nerd font: unicode图形字体
+https://github.com/ryanoasis/nerd-fonts.git
+
 ```
 # mac
-brew install node python3 yarn ranger neovim 
+brew install node python3 yarn ranger eeovim 
 
+# 安装gtags
+brew install global
 
 # lazygit
 brew install lazygit
@@ -16,6 +21,13 @@ https://github.com/myshov/xkbswitch-macosx.git
 
 # ubuntu
 sudo apt install node python3 yarn ranger neovim 
+
+# 安装gtags
+wget http://tamacom.com/global/global-6.6.2.tar.gz
+tar xzvf global-6.6.2.tar.gz
+cd global-6.6.2
+./configure
+make && make install
 
 # lazygit 
 sudo add-apt-repository ppa:lazygit-team/release
@@ -125,5 +137,18 @@ Leader 键定义为了空格，下面是自定义的按键说明
 | 热键     | 说明                 |
 | -------- | -------------------- |
 | leader+lg| lazygit|
+
+#### 搜索查询
+
+| 功能                           | 快捷键       | 模式   |
+| :-:                            | :-:          | :-:    |
+| 全局查询文件                   | `<leader>f`  | normal |
+| 全局查询指定字符串             | `<leader>qq` | normal |
+| 全局查询光标处的字符串         | `<leader>qw` | normal |
+| 在当前Buffer中查询光标处字符串 | `<leader>qb` | normal |
+| 重新执行上一次字符串搜索       | `<leader>qo` | normal |
+
+
+
 
 

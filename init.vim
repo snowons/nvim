@@ -119,7 +119,7 @@ imap <C-s> <Esc>:w<CR>a
 map <C-s> :w<CR>
 
 " Bracey插件，b新浏览器
-map br :BraceyReload<CR>
+" map br :BraceyReload<CR>
 
 " 设置默认进行大小写不敏感查找
 set ignorecase
@@ -346,9 +346,9 @@ Plug 'lyokha/vim-xkbswitch'
 " 多点编辑
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
-
 " git
 Plug 'kdheepak/lazygit.nvim'
+
 
 call plug#end()
 "indentLine缩进插件配置
@@ -363,8 +363,8 @@ let g:autopep8_disable_show_diff=1
 nnoremap <silent> <leader>lg :LazyGit<CR>
 
 
-let g:bracey_server_allow_remote_connections=1
-let g:bracey_server_port=8080
+" let g:bracey_server_allow_remote_connections=1
+" let g:bracey_server_port=8080
 
 "======= nerdcommenter
 " Create default mappings
@@ -574,6 +574,72 @@ nmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
+
+
+"----------------------------------------------------------------------
+" 插件 --- leaderf
+"----------------------------------------------------------------------
+" leaderf
+let g:Lf_WindowPosition            = 'bottom'
+
+let g:Lf_CacheDirectory            = expand('~/.vim/cache')
+let g:Lf_WindowHeight              = 0.35
+let g:Lf_StlColorscheme            = 'one'
+let g:Lf_ShowRelativePath          = 0
+let g:Lf_PreviewCode               = 1
+let g:Lf_PreviewResult             = { 'Rg': 1, 'Gtags': 1, 'function': 1 }
+let g:Lf_PreviewInPopup            = 1
+let g:Lf_PreviewPopupWidth         = &columns
+let g:Lf_DefaultMode               = 'NameOnly'
+let g:Lf_CursorBlink               = 1
+let g:Lf_RootMarkers               = ['.git', '.hg', '.svn', '.vscode', '.idea']
+let g:Lf_WildIgnore                = {
+    \ 'dir': ['.svn','.git','.hg', '.idea', '.vscode'],
+    \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]', '*.zip', '*.gz']
+    \ }
+let g:Lf_StlSeparator              = { 'left': '', 'right': '' }
+let g:Lf_PreviewCode               = 1
+let g:Lf_WorkingDirectoryMode      = 'c'
+let g:Lf_NoChdir                   = 1
+" leaderf rg
+let g:Lf_RgConfig = [
+    \ "--max-columns=150",
+    \ "--glob=!git/*",
+    \ "--hidden"
+    \ ]
+" 全局搜索输入的单词
+nmap <leader>qq :<C-U><C-R>=printf("Leaderf! rg --nowrap -F ")<cr>
+
+" 全局搜索光标处的单词
+nmap <leader>qw :<C-U><C-R>=printf("Leaderf! rg --nowrap -F %s ", expand("<cword>"))<cr>
+
+" 在当前buffer里搜索光标处的单词
+nmap <leader>qb :<C-U><C-R>=printf("Leaderf! rg --nowrap -F --current-buffer %s ", expand("<cword>"))<cr>
+
+" 搜索选中的文本
+xmap <leader>qw :<C-U><C-R>=printf("Leaderf! rg --nowrap -F %s ", leaderf#Rg#visual())<cr>
+
+" 重新执行上一次搜索
+nmap <leader>qo :<C-U>Leaderf! rg --recall<cr>
+
+" leaderf gtags
+let g:Lf_GtagsAutoGenerate = 0
+" 原生语言 C C++ JAVA PHP使用内置解析器
+let g:Lf_Gtagslabel = 'native-pygments'
+" 更新tags
+nmap <leader>gu :<C-U><C-R>=printf("Leaderf! gtags --update --skip-unreadable ")<cr><cr>
+" 查询定义或引用
+nmap <leader>gt :<C-U><C-R>=printf("Leaderf! gtags --by-context --auto-jump --path-style through")<cr><cr>
+" 查询定义
+nmap <leader>gd :<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump --path-style through", expand("<cword>"))<cr><cr>
+" 查询引用
+nmap <leader>gr :<C-U><C-R>=printf("Leaderf! gtags -r %s --auto-jump --path-style through", expand("<cword>"))<cr><cr>
+" 重新执行上一次搜索
+nmap <leader>go :<C-U><C-R>=printf("Leaderf! gtags --recall")<cr><cr>
+
+
+
+
 
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
