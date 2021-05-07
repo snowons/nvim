@@ -6,7 +6,7 @@ let mapleader=" "
 set number
 
 " 自动刷新浏览器
-let g:bracey_eval_on_save = 1
+" let g:bracey_eval_on_save = 1
 "let g:python_host_prog = '/usr/bin/python3'
 "let g:python3_host_prog = '/usr/local/bin/python3.9'
 " sneak 插件
@@ -555,7 +555,7 @@ nmap <leader>rn <Plug>(coc-rename)
 " Formatting selected code.
 "xmap <leader>f  <Plug>(coc-format-selected)
 "nmap <leader>f  <Plug>(coc-format-selected)
-nmap <C-p> <LEADER>f
+" nmap <C-p> <LEADER>f
 
 augroup mygroup
   autocmd!
