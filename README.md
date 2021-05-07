@@ -96,18 +96,6 @@ Leader 键定义为了空格，下面是自定义的按键说明
 | -------- | -------------------- |
 | rc       | 打开当前目录         |
 | rp       | 打开项目目录         |
-| leader+f | fzf项目文件模糊搜索  |
-| leader+b | fzf  Buffer 文件搜索 |
-| fp       | 项目文件检测         |
-| fb       | 显示Buffers文件      |
-| fg       | 显示文件GIT状态      |
-| bd       | 删除Buffer           |
-| bn       | 下一个Buffer         |
-| tc       |  关闭当前tab         |
-| tj       | 下一个tab            |
-| tn       | 新建一个tab          |
-| to       | 关闭所有其他tab          |
-
 
 
 ### 多点编辑
@@ -129,6 +117,13 @@ Leader 键定义为了空格，下面是自定义的按键说明
 | 热键     | 说明                 |
 | -------- | -------------------- |
 | leader+1-9| buffer 1-9切换|
+| leader+bd       | 删除Buffer           |
+| leader+bn       | 下一个Buffer         |
+| tc       |  关闭当前tab         |
+| tj       | 下一个tab            |
+| tn       | 新建一个tab          |
+| to       | 关闭所有其他tab          |
+
 
 
 
@@ -137,16 +132,6 @@ Leader 键定义为了空格，下面是自定义的按键说明
 | 热键     | 说明                 |
 | -------- | -------------------- |
 | leader+lg| lazygit|
-
-#### 搜索查询
-
-| 功能                           | 快捷键       | 模式   |
-| :-:                            | :-:          | :-:    |
-| 全局查询文件                   | `<leader>f`  | normal |
-| 全局查询指定字符串             | `<leader>qq` | normal |
-| 全局查询光标处的字符串         | `<leader>qw` | normal |
-| 在当前Buffer中查询光标处字符串 | `<leader>qb` | normal |
-| 重新执行上一次字符串搜索       | `<leader>qo` | normal |
 
 
 
@@ -159,6 +144,6 @@ Leader 键定义为了空格，下面是自定义的按键说明
 | leader+qw |全局查询光标处的字符串          |      |
 | leader+qb| |      在当前Buffer中查询光标处字符串|
 | leader+qo|重新执行上一次字符串搜索        |      |
-
+| leader+b | Buffer 文件搜索 |
 
 

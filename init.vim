@@ -209,11 +209,11 @@ nmap ge :CocCommand explorer <CR>
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 "搜索项目文件
-nmap fp :CocCommand fzf-preview.ProjectFiles<CR>
+" nmap fp :CocCommand fzf-preview.ProjectFiles<CR>
 "显示Buffers文件
-nmap fb :CocCommand fzf-preview.Buffers<CR>
+" nmap fb :CocCommand fzf-preview.Buffers<CR>
 "显示文件GIT状态
-nmap fg :CocCommand fzf-preview.GitStatus<CR>
+" nmap fg :CocCommand fzf-preview.GitStatus<CR>
 
 "当前目录文件
 map <silent>rc :RangerOpenCurrentDir<CR>
@@ -221,10 +221,6 @@ map <silent>rc :RangerOpenCurrentDir<CR>
 map <silent>rp :RangerOpenProjectRootDir<CR>
 
 
-"下一个buffer
-map <silent>bn :bn<CR>
-"删除当前buffer
-map <silent>bd :bd<CR>
 "============Yggdroot/LeaderF============
 "弹窗显示结果
 let g:Lf_WindowPosition = 'popup'
@@ -287,8 +283,8 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'iberianpig/ranger-explorer.vim'
 
 "fzf-preview
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 Plug 'kevinhwang91/rnvimr'
@@ -459,6 +455,13 @@ nmap <leader>7 <plug>lightline#bufferline#go(7)
 nmap <leader>8 <plug>lightline#bufferline#go(8)
 nmap <leader>9 <plug>lightline#bufferline#go(9)
 nmap <leader>0 <plug>lightline#bufferline#go(10) 
+
+
+"下一个buffer
+nmap <leader>bn :bn<CR>
+"删除当前buffer
+nmap <leader>bd :bd<CR>
+
 
 " 切换注释
 " map <c-m> <leader>ci
