@@ -6,8 +6,30 @@
 brew install node python3 yarn ranger neovim 
 
 
+# lazygit
+brew install lazygit
+
+# xkbswitch
+https://github.com/myshov/xkbswitch-macosx.git
+
+
+
 # ubuntu
 sudo apt install node python3 yarn ranger neovim 
+
+# lazygit 
+sudo add-apt-repository ppa:lazygit-team/release
+sudo apt-get update
+sudo apt-get install lazygit
+
+# xkbswitch
+sudo apt-get install libxkbfile-dev cmake
+git clone https://github.com/grwlf/xkb-switch.git
+cd xkb-switch
+mkdir build && cd build
+cmake ..
+make
+sudo make install
 
 ```
 
@@ -29,7 +51,7 @@ pip3 install ranger-fm
 ```
 CocInstall coc-css coc-explorer coc-html coc-snippets coc-ember coc-json coc-emmet coc-phpls coc-tsserver coc-eslint coc-highlight 
 
-CocInstall coc-prettier coc-vetur coc-git coc-svg coc-phpls coc-eslint coc-tailwindcss coc-fzf-preview coc-tabnine coc-fzf-preview
+CocInstall coc-prettier coc-vetur coc-git coc-svg coc-tailwindcss  coc-tabnine 
 ```
 
 ## 按键定义
