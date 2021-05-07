@@ -622,7 +622,7 @@ nmap <leader>qb :<C-U><C-R>=printf("Leaderf! rg --nowrap -F --current-buffer %s 
 " 搜索选中的文本
 xmap <leader>qw :<C-U><C-R>=printf("Leaderf! rg --nowrap -F %s ", leaderf#Rg#visual())<cr>
 
-" 重新执行上一次搜索
+" 重新执行上一次搜索 
 nmap <leader>qo :<C-U>Leaderf! rg --recall<cr>
 
 " leaderf gtags
@@ -640,8 +640,10 @@ nmap <leader>gr :<C-U><C-R>=printf("Leaderf! gtags -r %s --auto-jump --path-styl
 " 重新执行上一次搜索
 nmap <leader>go :<C-U><C-R>=printf("Leaderf! gtags --recall")<cr><cr>
 
-
-
+" 多光标
+let g:VM_maps                       = {}
+let g:VM_maps["Add Cursor Down"] = '<C-j>'
+let g:VM_maps["Add Cursor Up"]   = '<C-k>'
 
 
 " Map function and class text objects
