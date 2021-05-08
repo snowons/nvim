@@ -43,6 +43,20 @@ cmake ..
 make
 sudo make install
 
+# 安裝nerd
+首先下载文件
+wget -c https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/SourceCodePro.zip
+然后解压到文件夹:
+
+sudo unzip SourceCodePro -d /usr/share/fonts/SourceCodePro
+转到/usr/share/fonts/SourceCodePro目录，并安装
+
+cd /usr/share/fonts/SourceCodePro
+sudo mkfontscale # 生成核心字体信息
+sudo mkfontdir # 生成字体文件夹
+sudo fc-cache -fv # 刷新系统字体缓存
+
+
 ```
 
 然后安装neovim需要软件包
