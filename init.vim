@@ -346,6 +346,10 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'kdheepak/lazygit.nvim'
 
 
+" 翻譯
+Plug 'voldikss/vim-translator'
+
+
 call plug#end()
 "indentLine缩进插件配置
 
@@ -643,8 +647,20 @@ nmap <leader>go :<C-U><C-R>=printf("Leaderf! gtags --recall")<cr><cr>
 " 多光标
 let g:VM_maps                       = {}
 let g:VM_maps["Add Cursor Down"] = '<A-j>'
-let g:VM_maps["Add Cursor Up"]   = '<C-k>'
+let g:VM_maps["Add Cursor Up"]   = '<A-k>'
 
+
+""" 翻譯
+nmap <silent> <Leader>t <Plug>Translate
+vmap <silent> <Leader>t <Plug>TranslateV
+" Display translation in a window
+nmap <silent> <Leader>w <Plug>TranslateW
+vmap <silent> <Leader>w <Plug>TranslateWV
+" Replace the text with translation
+" nmap <silent> <Leader>r <Plug>TranslateR
+" vmap <silent> <Leader>r <Plug>TranslateRV
+" Translate the text in clipboard
+nmap <silent> <Leader>x <Plug>TranslateX
 
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
