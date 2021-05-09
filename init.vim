@@ -642,7 +642,7 @@ nmap <leader>go :<C-U><C-R>=printf("Leaderf! gtags --recall")<cr><cr>
 
 " 多光标
 let g:VM_maps                       = {}
-let g:VM_maps["Add Cursor Down"] = '<C-j>'
+let g:VM_maps["Add Cursor Down"] = '<A-j>'
 let g:VM_maps["Add Cursor Up"]   = '<C-k>'
 
 
