@@ -5,17 +5,6 @@ let mapleader=" "
 "显示行号
 set number
 
-" 自动刷新浏览器
-" let g:bracey_eval_on_save = 1
-"let g:python_host_prog = '/usr/bin/python3'
-"let g:python3_host_prog = '/usr/local/bin/python3.9'
-" sneak 插件
-let g:sneak#label = 1
-
-"====================sneaks快速搜索
-"map s <Plug>Sneak_s
-"map S <Plug>Sneak_S
-
 set termguicolors
 if &term =~# '^screen'
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -96,9 +85,6 @@ set relativenumber
 "滚动时距离底部有6行
 set scrolloff=6
 
-"当前行下划线
-"set cursorline
-
 "换行
 set wrap
 
@@ -118,9 +104,6 @@ noremap <LEADER><CR> :nohlsearch<CR>
 imap <C-s> <Esc>:w<CR>a
 map <C-s> :w<CR>
 
-" Bracey插件，b新浏览器
-" map br :BraceyReload<CR>
-
 " 设置默认进行大小写不敏感查找
 set ignorecase
 
@@ -131,14 +114,8 @@ set ts=4
 set expandtab
 set autoindent
 
-"疷部显示输入命令，了解当前正在输入的命令
-"set showcmd
-
 "命令模式下tab补全
 set wildmenu
-
-"拼写检查
-map <LEADER>sc :set spell!<CR>
 
 "最近文件切换 　
 imap <C-e> <Esc><C-^>
@@ -208,12 +185,6 @@ nmap ge :CocCommand explorer <CR>
 "perttier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
-"搜索项目文件
-" nmap fp :CocCommand fzf-preview.ProjectFiles<CR>
-"显示Buffers文件
-" nmap fb :CocCommand fzf-preview.Buffers<CR>
-"显示文件GIT状态
-" nmap fg :CocCommand fzf-preview.GitStatus<CR>
 
 "当前目录文件
 map <silent>rc :RangerOpenCurrentDir<CR>
@@ -231,16 +202,6 @@ let g:airline#extensions#tabline#enabled = 1
 "airline风格主题
 let g:airline_theme='molokai'
 
-"============stephpy/vim-php-cs-fixer============
-" let g:php_cs_fixer_level = "symfony"
-" let g:php_cs_fixer_config = "default"
-" let g:php_cs_fixer_config_file = '.php_cs' " options: --config
-" let g:php_cs_fixer_php_path = "php"               " Path to PHP
-" let g:php_cs_fixer_enable_default_mapping = 1     " Enable the mapping by default (<leader>pcd)
-" let g:php_cs_fixer_dry_run = 0                    " Call command with dry-run option
-" let g:php_cs_fixer_verbose = 0                    " Return the output of command if 1, else an inline information.
-" autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
-
 
 "============插件列表============
 call plug#begin('~/.vim/plugged')
@@ -250,16 +211,11 @@ Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug 'ap/vim-css-color'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'gcmt/wildfire.vim'
 Plug 'tpope/vim-surround'
 
 Plug 'preservim/nerdtree'
 
-"代码错误提示
-Plug 'dense-analysis/ale'
-"Plug 'stephpy/vim-php-cs-fixer'
 Plug 'preservim/nerdcommenter'
-"Plug 'wakatime/vim-wakatime'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'jiangmiao/auto-pairs'
@@ -270,31 +226,16 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 
-"laravel插件
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-projectionist'
-"Plug 'roxma/nvim-completion-manager'
-Plug 'noahfrederick/vim-composer'
-Plug 'noahfrederick/vim-laravel'
 Plug 'editorconfig/editorconfig-vim'
 
 "ranger
 Plug 'rbgrouleff/bclose.vim'
 Plug 'iberianpig/ranger-explorer.vim'
 
-"fzf-preview
-" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-" Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 Plug 'kevinhwang91/rnvimr'
-"替换边界符，如引号
 Plug 'easymotion/vim-easymotion'
-
-Plug 'preservim/nerdcommenter'
-
-"liver-server
-Plug 'turbio/bracey.vim'
 
 Plug 'preservim/tagbar'
 
@@ -303,8 +244,6 @@ Plug 'alvan/vim-closetag'
 
 " 同时修改标签名
 Plug 'AndrewRadev/tagalong.vim'
-
-"Plug 'justinmk/vim-sneak'
 
 Plug 'voldikss/vim-floaterm'
 Plug 'ryanoasis/vim-devicons'
@@ -321,8 +260,6 @@ Plug 'yuezk/vim-js'
 Plug 'cakebaker/scss-syntax.vim'
 "缩进显示"
 Plug 'nathanaelkane/vim-indent-guides' 
-"操作多个文件"
-" Plug 'fholgado/minibufexpl.vim'
 "缩进指示线"
 Plug 'Yggdroot/indentLine' 
 
@@ -350,6 +287,7 @@ Plug 'kdheepak/lazygit.nvim'
 Plug 'voldikss/vim-translator'
 
 
+
 call plug#end()
 "indentLine缩进插件配置
 
@@ -358,13 +296,8 @@ let g:indentLine_char = "┆"
 let g:indentLine_enabled = 1
 let g:autopep8_disable_show_diff=1
 
-
 " setup mapping to call :LazyGit
 nnoremap <silent> <leader>lg :LazyGit<CR>
-
-
-" let g:bracey_server_allow_remote_connections=1
-" let g:bracey_server_port=8080
 
 "======= nerdcommenter
 " Create default mappings
@@ -466,10 +399,6 @@ nmap <leader>bn :bn<CR>
 "删除当前buffer
 nmap <leader>bd :bd<CR>
 
-
-" 切换注释
-" map <c-m> <leader>ci
-
 "Server dart 
 let dart_html_in_string=v:true
 let g:dart_style_guide = 2
@@ -559,11 +488,6 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
 
-" Formatting selected code.
-"xmap <leader>f  <Plug>(coc-format-selected)
-"nmap <leader>f  <Plug>(coc-format-selected)
-" nmap <C-p> <LEADER>f
-
 augroup mygroup
   autocmd!
   " Setup formatexpr specified filetype(s).
@@ -572,18 +496,6 @@ augroup mygroup
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
-" Applying codeAction to the selected region.
-" Example: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
-
-" Remap keys for applying codeAction to the current buffer.
-nmap <leader>ac  <Plug>(coc-codeaction)
-" Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
-
-
-"----------------------------------------------------------------------
 " 插件 --- leaderf
 "----------------------------------------------------------------------
 " leaderf
@@ -702,20 +614,3 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
-" Mappings for CoCList
-" Show all diagnostics.
-nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
-" Manage extensions.
-nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
-" Show commands.
-nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
-" Find symbol of current document.
-nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
-" Search workspace symbols.
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
-" Resume latest coc list.
-nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
