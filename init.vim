@@ -189,11 +189,6 @@ map <silent>rc :RangerOpenCurrentDir<CR>
 "项目目录文件
 map <silent>rp :RangerOpenProjectRootDir<CR>
 
-
-"============Yggdroot/LeaderF============
-"弹窗显示结果
-let g:Lf_WindowPosition = 'popup'
-
 "============vim-airline============
 "显示tab和buffer
 let g:airline#extensions#tabline#enabled = 1
@@ -498,7 +493,6 @@ augroup end
 "----------------------------------------------------------------------
 " leaderf
 let g:Lf_WindowPosition            = 'bottom'
-
 let g:Lf_CacheDirectory            = expand('~/.vim/cache')
 let g:Lf_WindowHeight              = 0.35
 let g:Lf_StlColorscheme            = 'one'
