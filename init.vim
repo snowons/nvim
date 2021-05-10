@@ -59,9 +59,7 @@ color one
 " vim-floaterm
 nnoremap tl :FloatermNew --height=0.95 --width=0.95 --wintype=floating --name=floaterm1 --position=center --autoclose=2 <CR>
 nnoremap tr :FloatermNew --height=0.95 --width=0.95 --wintype=floating --name=floaterm1 --position=center --autoclose=2 ranger <CR>
-nnoremap td :FloatermNew --height=0.95 --width=0.95 --wintype=floating --name=floaterm1 --position=center --autoclose=2 mycli -h192.168.10.10 -uhomestead -psecret <CR>
-" 切换上一个浮动窗口
-let g:floaterm_keymap_next = '<C-n>'
+
 " 切浮动窗口
 let g:floaterm_keymap_toggle = '<C-h>'
 
