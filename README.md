@@ -21,6 +21,7 @@ https://github.com/myshov/xkbswitch-macosx.git
 
 # ubuntu
 sudo apt install node python3 yarn ranger neovim 
+sudo apt install xclip
 
 # 安装gtags
 wget http://tamacom.com/global/global-6.6.2.tar.gz

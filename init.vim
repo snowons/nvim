@@ -26,7 +26,6 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
 
-
 "Flutter shortcuts
 nnoremap <leader>fn :FlutterRun<cr>
 nnoremap <leader>fq :FlutterQuit<cr>
@@ -227,7 +226,7 @@ Plug 'iberianpig/ranger-explorer.vim'
 
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
-Plug 'kevinhwang91/rnvimr'
+Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 Plug 'easymotion/vim-easymotion'
 
 Plug 'preservim/tagbar'
@@ -319,6 +318,11 @@ let g:NERDTrimTrailingWhitespace = 1
 
 " Enable NERDCommenterToggle to check all selected lines is commented or not
 let g:NERDToggleCheckAllLines = 1
+
+" Make Ranger replace netrw and be the file explorer
+let g:rnvimr_ex_enable = 1
+let g:rnvimr_draw_border = 1
+nmap <space>r :RnvimrToggle<CR>
 
 " 输入法切换
 let g:XkbSwitchEnabled = 1
