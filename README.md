@@ -23,6 +23,20 @@ https://github.com/myshov/xkbswitch-macosx.git
 sudo apt install node python3 yarn ranger neovim 
 sudo apt install xclip
 
+sudo apt install python-pip
+sudo apt install python3-pip3
+
+# ranger 
+sudo pip3 install  ueberzug 
+sudo pip3 install pynvim
+ranger --copy-config=all
+git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+# add this configuration to rc.conf
+set preview_images true
+set preview_images_method ueberzug
+default_linemode devicons
+set show_hidden true
+ 
 # 安装gtags
 wget http://tamacom.com/global/global-6.6.2.tar.gz
 tar xzvf global-6.6.2.tar.gz
