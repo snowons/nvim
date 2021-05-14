@@ -92,7 +92,7 @@ pip3 install ranger-fm
 ```
 CocInstall coc-css coc-explorer coc-html coc-snippets coc-ember coc-json coc-emmet coc-phpls coc-tsserver coc-eslint coc-highlight 
 
-CocInstall coc-prettier coc-vetur coc-git coc-svg coc-tailwindcss  coc-tabnine 
+CocInstall coc-prettier coc-vetur coc-git coc-svg coc-tailwindcss  coc-tabnine coc-rls 
 ```
 
 ## 按键定义

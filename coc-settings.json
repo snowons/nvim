@@ -13,7 +13,8 @@
         "js",
         "php",
         "vue",
-        "json"
+        "json",
+        "rust"
     ],
     "suggest.detailMaxLength": 60,
     "suggest.noselect": true,
