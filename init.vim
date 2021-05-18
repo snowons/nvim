@@ -4,7 +4,7 @@ let mapleader=" "
 
 "显示行号
 set number
-
+set noswapfile
 set termguicolors
 if &term =~# '^screen'
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
