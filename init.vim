@@ -188,7 +188,7 @@ let g:airline_theme='molokai'
 
 "============插件列表============
 call plug#begin('~/.vim/plugged')
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'mhinz/vim-startify'
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug 'ap/vim-css-color'
@@ -198,7 +198,6 @@ Plug 'tpope/vim-surround'
 
 Plug 'preservim/nerdtree'
 
-Plug 'preservim/nerdcommenter'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'jiangmiao/auto-pairs'
@@ -208,14 +207,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
-
 Plug 'editorconfig/editorconfig-vim'
 
 "ranger
 Plug 'rbgrouleff/bclose.vim'
 Plug 'iberianpig/ranger-explorer.vim'
-
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 Plug 'easymotion/vim-easymotion'
@@ -269,7 +265,10 @@ Plug 'kdheepak/lazygit.nvim'
 " 翻譯
 Plug 'voldikss/vim-translator'
 
-
+" 注释
+Plug 'Shougo/context_filetype.vim'
+" Plug 'preservim/nerdcommenter'
+Plug 'tyru/caw.vim'
 
 call plug#end()
 "indentLine缩进插件配置
