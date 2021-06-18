@@ -92,7 +92,7 @@ pip3 install ranger-fm
 ```
 CocInstall coc-css coc-explorer coc-html coc-snippets coc-ember coc-json coc-emmet coc-phpls coc-tsserver coc-eslint coc-highlight 
 
-CocInstall coc-prettier coc-vetur coc-git coc-svg coc-tailwindcss  coc-tabnine coc-rls 
+CocInstall coc-clangd coc-prettier coc-vetur coc-git coc-svg coc-tailwindcss  coc-tabnine coc-rls 
 ```
 
 ## 按键定义
@@ -122,8 +122,9 @@ Leader 键定义为了空格，下面是自定义的按键说明
 
 | 热键     | 说明                 |
 | -------- | -------------------- |
-| rc       | 打开当前目录         |
-| rp       | 打开项目目录         |
+| leader+rc       | 打开当前目录         |
+| leader+rp       | 打开项目目录         |
+| leader+rs       | 更新配置文件|
 
 
 ### 多点编辑

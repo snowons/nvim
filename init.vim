@@ -130,8 +130,16 @@ imap jj <Esc>
 nmap J 5j
 nmap K 5k
 
+"光标 左移 至当前行的第一个字符
+nnoremap H ^
+"将光标 右移 至当前行的最后一个字符
+nnoremap L $
+
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+
 "重新加载配置文件
-map <LEADER>rc :source ~/.config/nvim/init.vim<CR>
+map <LEADER>rs :source ~/.config/nvim/init.vim<CR>
 
 "向左分屏
 nmap sl :set splitright<CR>:vsplit<CR>
@@ -154,10 +162,10 @@ nmap <LEADER>h <C-w>h
 "移动到右边窗口
 nmap <LEADER>l <C-w>l
 "窗口缩放
-map _ :res -5<CR>
-map + :res +5<CR>
-map - :vertical :res-5<CR>
-map = :vertical :res+5<CR>
+" map _ :res -5<CR>
+" map + :res +5<CR>
+" map - :vertical :res-5<CR>
+" map = :vertical :res+5<CR>
 
 "创建标签
 map tn :tabe<CR>
@@ -170,14 +178,16 @@ map tj :tabnext<CR>
 "资源管理器
 nmap ge :CocCommand explorer <CR>
 
+"全选
+map <leader>sa ggVG
+
 "perttier
 "command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
-
 "当前目录文件
-map <silent>rc :RangerOpenCurrentDir<CR>
+nmap <leader>rc :RangerOpenCurrentDir<CR>
 "项目目录文件
-map <silent>rp :RangerOpenProjectRootDir<CR>
+nmap <leader>rp :RangerOpenProjectRootDir<CR>
 
 "============vim-airline============
 "显示tab和buffer
