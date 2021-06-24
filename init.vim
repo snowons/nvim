@@ -443,21 +443,6 @@ xmap <leader>qw :<C-U><C-R>=printf("Leaderf! rg --nowrap -F %s ", leaderf#Rg#vis
 " 重新执行上一次搜索 
 nmap <leader>qo :<C-U>Leaderf! rg --recall<cr>
 
-" leaderf gtags
-let g:Lf_GtagsAutoGenerate = 0
-" 原生语言 C C++ JAVA PHP使用内置解析器
-let g:Lf_Gtagslabel = 'native-pygments'
-" 更新tags
-nmap <leader>gu :<C-U><C-R>=printf("Leaderf! gtags --update --skip-unreadable ")<cr><cr>
-" 查询定义或引用
-nmap <leader>gt :<C-U><C-R>=printf("Leaderf! gtags --by-context --auto-jump --path-style through")<cr><cr>
-" 查询定义
-nmap <leader>gd :<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump --path-style through", expand("<cword>"))<cr><cr>
-" 查询引用
-nmap <leader>gr :<C-U><C-R>=printf("Leaderf! gtags -r %s --auto-jump --path-style through", expand("<cword>"))<cr><cr>
-" 重新执行上一次搜索
-nmap <leader>go :<C-U><C-R>=printf("Leaderf! gtags --recall")<cr><cr>
-
 " 多光标
 let g:VM_maps                       = {}
 let g:VM_maps["Add Cursor Down"] = '<A-j>'
