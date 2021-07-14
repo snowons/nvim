@@ -280,6 +280,9 @@ Plug 'Shougo/context_filetype.vim'
 " Plug 'preservim/nerdcommenter'
 Plug 'tyru/caw.vim'
 
+" 颜色
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+
 call plug#end()
 "indentLine缩进插件配置
 
