@@ -1,5 +1,6 @@
 "设置Leade为空格
 let mapleader=" "
+let g:coc_logfile = $HOME . '/.config/nvim/coc.log'
 
 "显示行号
 set number
@@ -21,12 +22,6 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
 
-"Flutter shortcuts
-nnoremap <leader>fn :FlutterRun<cr>
-nnoremap <leader>fq :FlutterQuit<cr>
-nnoremap <leader>fh :FlutterHotReload<cr>
-nnoremap <leader>fr :FlutterHotRestart<cr>
-nnoremap <leader>fd :FlutterVisualDebug<cr>
 
 "共享剪贴板
 set clipboard+=unnamed
@@ -283,6 +278,15 @@ Plug 'tyru/caw.vim'
 " 颜色
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
+" markdown 预览插件
+Plug 'iamcco/markdown-preview.nvim'
+
+" tab键补全功能插件
+Plug 'ervandew/supertab'
+
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
+
 call plug#end()
 "indentLine缩进插件配置
 
@@ -411,7 +415,8 @@ let g:Lf_WindowHeight              = 0.35
 let g:Lf_StlColorscheme            = 'one'
 let g:Lf_ShowRelativePath          = 0
 let g:Lf_PreviewCode               = 1
-let g:Lf_PreviewResult             = { 'Rg': 1, 'Gtags': 1, 'function': 1 }
+" let g:Lf_PreviewResult             = { 'Rg': 1, 'Gtags': 1, 'function': 1 }
+let g:Lf_PreviewResult             = { 'Rg': 1,  'function': 1 }
 let g:Lf_PreviewInPopup            = 1
 let g:Lf_PreviewPopupWidth         = &columns
 let g:Lf_DefaultMode               = 'NameOnly'
@@ -445,6 +450,11 @@ xmap <leader>qw :<C-U><C-R>=printf("Leaderf! rg --nowrap -F %s ", leaderf#Rg#vis
 
 " 重新执行上一次搜索 
 nmap <leader>qo :<C-U>Leaderf! rg --recall<cr>
+
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " 多光标
 let g:VM_maps                       = {}

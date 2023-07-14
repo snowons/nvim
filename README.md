@@ -6,10 +6,7 @@ https://github.com/ryanoasis/nerd-fonts.git
 
 ```
 # mac
-brew install node python3 yarn ranger eeovim 
-
-# 安装gtags
-brew install global
+brew install node python3 yarn ranger neovim 
 
 # lazygit
 brew install lazygit
@@ -37,12 +34,6 @@ set preview_images_method ueberzug
 default_linemode devicons
 set show_hidden true
  
-# 安装gtags
-wget http://tamacom.com/global/global-6.6.2.tar.gz
-tar xzvf global-6.6.2.tar.gz
-cd global-6.6.2
-./configure
-make && make install
 
 # lazygit 
 sudo add-apt-repository ppa:lazygit-team/release
@@ -99,15 +90,14 @@ CocInstall coc-clangd coc-prettier coc-vetur coc-git coc-svg coc-tailwindcss  co
 
 Leader 键定义为了空格，下面是自定义的按键说明
 
-### Flutter 
+### 搜索
 
 | 热键    | 说明             | 模式 |
 | ------- | ---------------- | ---- |
-| leader+fn| Run        |      |
-| leader+fr| HotRestart |      |
-| leader+fh | HotReload          |      |
-| leader+fq| Quit|      |
-| leader+fd| Debug|      |
+| leader+ff| files|      |
+| leader+fg| live_grep|      |
+| leader+fb | buffer|      |
+| leader+fh| help|      |
 
 ### 移动定位
 
@@ -192,7 +182,7 @@ Leader 键定义为了空格，下面是自定义的按键说明
 | leader+f| 全局查询文件                  |      |
 | leader+qq| 全局查询指定字符串             |      |
 | leader+qw |全局查询光标处的字符串          |      |
-| leader+qb| |      在当前Buffer中查询光标处字符串|
+| leader+qb|       在当前Buffer中查询光标处字符串| |
 | leader+qo|重新执行上一次字符串搜索        |      |
 | leader+b | Buffer 文件搜索 |
 
