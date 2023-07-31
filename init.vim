@@ -122,8 +122,8 @@ nmap , :
 imap jj <Esc>
 
 "快速跳转行
-nmap J 5j
-nmap K 5k
+nmap J 9j
+nmap K 9k
 
 "光标 左移 至当前行的第一个字符
 nnoremap H ^
@@ -388,7 +388,7 @@ set nobackup
 set nowritebackup
 
 " Give more space for displaying messages.
-set cmdheight=2
+set cmdheight=1
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
