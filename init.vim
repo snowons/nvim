@@ -47,6 +47,10 @@ nnoremap tr :FloatermNew --height=0.95 --width=0.95 --wintype=floating --name=fl
 
 " 切浮动窗口
 let g:floaterm_keymap_toggle = '<C-h>'
+" 终端宽(0,1)
+let g:floaterm_width = 0.8
+" 终端高(0,1)
+let g:floaterm_height = 0.8
 
 highlight Normal guibg=NONE ctermbg=None
 
